@@ -17,7 +17,7 @@
 
 ## Установка
 
-- `composer create-project --prefer-dist nikolaevdev/yngling`
+- `git clone https://github.com/nikolaevdev/yngling.git .` в папке, где будет расположено приложение
 - Отредактируйте `.env` и задайте данные подключения к базе данных
 - (При установке с помощью git clone или загрузки запустите "php artisan key:generate" и "php artisan jwt:secret")
 - `php artisan migrate`
