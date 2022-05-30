@@ -2,9 +2,10 @@
 > Русско - Английский словарь для запоминания слов
 
 <p align="center">
-<img src="[https://thumbsnap.com/i/ncBQDaV3.jpg?0530]>
+<img src="https://thumbsnap.com/i/ncBQDaV3.jpg?0530">
 </p>
 
+          
 ## Функции 
 
 - Загрузка файла словаря в систему
