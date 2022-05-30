@@ -1,0 +1,170 @@
+@import '~sweetalert2/dist/sweetalert2';
+@import '~@fortawesome/fontawesome-svg-core/styles';
+@import "~bulma/sass/utilities/_all";
+@import '~@mdi/font/css/materialdesignicons.css';
+ 
+// Set your colors
+$primary: #ed1c24;
+$primary-light: findLightColor($primary);
+$primary-dark: findDarkColor($primary);
+$primary-invert: findColorInvert($primary);
+$twitter: #4099FF;
+$twitter-invert: findColorInvert($twitter);
+
+// Lists and maps
+$custom-colors: null !default;
+$custom-shades: null !default;
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: mergeColorMaps(
+    (
+        "white": (
+            $white, 
+            $black,
+        ),
+        "black": (
+            $black,
+            $white,
+        ),
+        "light": (
+            $light,
+            $light-invert,
+        ),
+        "dark": (
+            $dark,
+            $dark-invert,
+        ),
+        "primary": (
+            $primary,
+            $primary-invert,
+            $primary-light,
+            $primary-dark,
+        ),
+        "link": (
+            $link,
+            $link-invert,
+            $link-light,
+            $link-dark,
+        ),
+        "info": (
+            $info,
+            $info-invert,
+            $info-light,
+            $info-dark,
+        ),
+        "success": (
+            $success,
+            $success-invert,
+            $success-light,
+            $success-dark,
+        ),
+        "warning": (
+            $warning,
+            $warning-invert,
+            $warning-light,
+            $warning-dark,
+        ),
+        "danger": (
+            $danger,
+            $danger-invert,
+            $danger-light,
+            $danger-dark,
+        ),
+    ),
+    $custom-colors
+);
+
+// Links
+$link: $primary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+
+$navbar-item-img-max-height: 3.45rem;
+$navbar-padding-vertical: 2.25;
+
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+
+:root {
+    --shape-card-radius: 1.75rem;
+    --shape-card-text-radius: 1.75rem;
+}
+
+.shape-hide {
+    display: none;
+}
+.shape-card {
+    border-radius: var(--shape-card-radius);
+    box-shadow: 0 0.5em 1.7em 0em rgb(10 10 10 / 7%), 0 0px 0 1px rgb(10 10 10 / 2%);
+}
+
+.shape-left-text-wrap {
+    border-top-left-radius: var(--shape-card-radius);
+    border-bottom-left-radius: var(--shape-card-radius);
+}
+
+.shape-right-text-wrap{
+    border-top-right-radius: var(--shape-card-radius);
+    border-bottom-right-radius: var(--shape-card-radius);
+    background-color: $primary-light;
+}
+
+.shape-right-text-wrap-hide {
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    filter: blur(20px);
+    filter: url('/images/blur.svg#shape-blur');
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+  }
+.shape-left-text-wrap .content,
+.shape-right-text-wrap .content{
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: keep-all;
+    line-break:strict;
+    hyphens:auto;
+}
+
+.shape-tabe-badge-text,
+.shape-badge,
+.shape-badge-text-header-left,
+.shape-badge-text-header-right {
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    font-size: 0.75em;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: left;
+    white-space: normal;
+    vertical-align: baseline;
+}
+
+.shape-tabe-badge-text {
+    background: $primary;
+    color: $white;
+    border-radius: var(--shape-card-text-radius);
+}
+
+.shape-badge {
+    color: $dark;
+}
+
+.shape-badge-text-header-left,
+.shape-badge-text-header-right {
+    color: $primary-dark;
+}
+
+.shape-badge-text-header-left {
+    border-radius: var(--shape-card-text-radius);
+    border: 0.15rem solid $primary-light;
+}
+
+.shape-badge-text-header-right {
+    border-radius: var(--shape-card-text-radius);
+    border: 0.15rem solid $light;
+    background-color: $white;
+}
