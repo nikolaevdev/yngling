@@ -120,6 +120,7 @@ $navbar-padding-vertical: 2.25;
     -khtml-user-select: none;
     -webkit-user-select: none;
   }
+  
 .shape-left-text-wrap .content,
 .shape-right-text-wrap .content{
     overflow-wrap: break-word;
@@ -167,4 +168,4 @@ $navbar-padding-vertical: 2.25;
     border-radius: var(--shape-card-text-radius);
     border: 0.15rem solid $light;
     background-color: $white;
-}
+} 
